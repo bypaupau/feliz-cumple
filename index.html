@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Feliz cumpleaños, Daniel! ♡</title>
+<meta name="description" content="Una sorpresa de cumpleaños para Daniel.">
+<meta name="theme-color" content="#CDAE80">
+
+<!-- icono de la página. Rutas relativas: funcionan igual en local
+     y publicado en un subdirectorio de GitHub Pages. -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<script>document.documentElement.className += ' js';</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     1 · TRANSICIÓN DE ENTRADA (pantalla completa)
+     ═══════════════════════════════════════════════════════ -->
+<div class="entrada" id="entrada" aria-hidden="true">
+  <div class="franja franja--1" style="--c:#C9945F; --g:#DDB184"></div>
+  <div class="franja franja--2" style="--c:#E9C9A2; --g:#FFF8EE"></div>
+  <div class="franja franja--3" style="--c:#D3E7F2; --g:#EDF6FB"></div>
+  <div class="franja franja--4" style="--c:#DDB184; --g:#FFF4E6"></div>
+  <div class="franja franja--5" style="--c:#FFF8EE; --g:#FFFDF8"></div>
+  <div class="franja franja--6" style="--c:#F7CBDA; --g:#FDEFF4"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     DIBUJOS REUTILIZABLES
+     ═══════════════════════════════════════════════════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <symbol id="d-vela" viewBox="0 0 40 74">
+    <path d="M20 22c5 6 7 10 7 13a7 7 0 0 1-14 0c0-3 2-7 7-13Z" fill="#F7C64B"/>
+    <path d="M20 29c2.4 3 3.4 5 3.4 6.6a3.4 3.4 0 0 1-6.8 0c0-1.6 1-3.6 3.4-6.6Z" fill="#FFF0B8"/>
+    <rect x="14" y="40" width="12" height="32" rx="4" fill="#FFF8EE"/>
+    <path d="M14 48h12M14 58h12" stroke="#F3B8CE" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M20 40v-4" stroke="#8A7258" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="d-estrella" viewBox="0 0 44 44">
+    <path d="M22 3l5.4 12.6L41 17l-10 9 2.8 13.4L22 32.6 10.2 39.4 13 26 3 17l13.6-1.4Z"/>
+  </symbol>
+
+  <symbol id="d-corazon" viewBox="0 0 44 40">
+    <path d="M22 37C8.4 27.6 3 21.2 3 14.6A10.6 10.6 0 0 1 22 8 10.6 10.6 0 0 1 41 14.6C41 21.2 35.6 27.6 22 37Z"/>
+  </symbol>
+
+  <symbol id="d-chispa" viewBox="0 0 40 40">
+    <path d="M20 2c1.6 10 6.4 15.4 18 18-11.6 2.6-16.4 8-18 18-1.6-10-6.4-15.4-18-18C13.6 17.4 18.4 12 20 2Z"/>
+  </symbol>
+
+  <!-- clip sujetapapeles -->
+  <symbol id="d-clip" viewBox="0 0 30 64">
+    <path d="M15 58V14a8 8 0 0 1 16 0v38" transform="translate(-8)"
+          fill="none" stroke="#9FD3E8" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M7 52V15a8 8 0 0 1 16 0v40a6 6 0 0 1-12 0V20"
+          fill="none" stroke="#7FC0DC" stroke-width="4.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- papel dentado del sello postal -->
+  <symbol id="d-sello" viewBox="0 0 100 116">
+    <path d="M0.0 0.0A7.1 7.1 0 0 0 14.3 0.0A7.1 7.1 0 0 0 28.6 0.0A7.1 7.1 0 0 0 42.9 0.0A7.1 7.1 0 0 0 57.1 0.0A7.1 7.1 0 0 0 71.4 0.0A7.1 7.1 0 0 0 85.7 0.0A7.1 7.1 0 0 0 100.0 0.0A7.2 7.2 0 0 0 100.0 14.5A7.2 7.2 0 0 0 100.0 29.0A7.2 7.2 0 0 0 100.0 43.5A7.2 7.2 0 0 0 100.0 58.0A7.2 7.2 0 0 0 100.0 72.5A7.2 7.2 0 0 0 100.0 87.0A7.2 7.2 0 0 0 100.0 101.5A7.2 7.2 0 0 0 100.0 116.0A7.1 7.1 0 0 0 85.7 116.0A7.1 7.1 0 0 0 71.4 116.0A7.1 7.1 0 0 0 57.1 116.0A7.1 7.1 0 0 0 42.9 116.0A7.1 7.1 0 0 0 28.6 116.0A7.1 7.1 0 0 0 14.3 116.0A7.1 7.1 0 0 0 0.0 116.0A7.2 7.2 0 0 0 0.0 101.5A7.2 7.2 0 0 0 0.0 87.0A7.2 7.2 0 0 0 0.0 72.5A7.2 7.2 0 0 0 0.0 58.0A7.2 7.2 0 0 0 0.0 43.5A7.2 7.2 0 0 0 0.0 29.0A7.2 7.2 0 0 0 0.0 14.5A7.2 7.2 0 0 0 0.0 0.0Z"/>
+  </symbol>
+
+  <!-- pegatinas troqueladas: forma + borde de papel recortado -->
+  <symbol id="d-flor" viewBox="0 0 64 64">
+    <g stroke="#FFFBF2" stroke-width="7" stroke-linejoin="round">
+      <ellipse cx="32" cy="15" rx="9.5" ry="13"/>
+      <ellipse cx="32" cy="49" rx="9.5" ry="13"/>
+      <ellipse cx="15" cy="32" rx="13" ry="9.5"/>
+      <ellipse cx="49" cy="32" rx="13" ry="9.5"/>
+    </g>
+    <g fill="#F3B8CE">
+      <ellipse cx="32" cy="15" rx="9.5" ry="13"/>
+      <ellipse cx="32" cy="49" rx="9.5" ry="13"/>
+      <ellipse cx="15" cy="32" rx="13" ry="9.5"/>
+      <ellipse cx="49" cy="32" rx="13" ry="9.5"/>
+    </g>
+    <circle cx="32" cy="32" r="8.5" fill="#F7C64B" stroke="#FFFBF2" stroke-width="3"/>
+  </symbol>
+
+  <symbol id="d-estrella-p" viewBox="0 0 64 64">
+    <path d="M32 5l8 17.6 19.2 2.2-14.2 13 3.9 19L32 47.4 15.1 56.8l3.9-19-14.2-13L24 22.6Z"
+          fill="#F7C64B" stroke="#FFFBF2" stroke-width="6" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="d-corazon-p" viewBox="0 0 64 60">
+    <path d="M32 54C12.6 40.6 5 31.6 5 22.2A14.6 14.6 0 0 1 32 12 14.6 14.6 0 0 1 59 22.2C59 31.6 51.4 40.6 32 54Z"
+          fill="#E2709F" stroke="#FFFBF2" stroke-width="6" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="d-flecha" viewBox="0 0 20 30">
+    <path d="M10 3v22M3.5 18.5 10 26l6.5-7.5" fill="none" stroke="currentColor"
+          stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</defs></svg>
+
+<main class="tablero">
+
+  <!-- ═══════════════════════════════════════════════════════
+       2 · ESCENA INICIAL — tarjeta + puente + asomo del pastel
+       ═══════════════════════════════════════════════════════ -->
+  <section class="escena-inicial">
+
+    <!-- la mesa de scrapbook: recortes de papel alrededor de la hoja.
+         Unos quedan detrás de la carta y otros delante, para que se
+         lea como papel apilado sobre una mesa. -->
+    <div class="mesa">
+
+      <!-- DETRÁS de la hoja -->
+      <span class="recorte recorte--menta" aria-hidden="true"></span>
+      <span class="recorte recorte--mantequilla" aria-hidden="true"></span>
+      <span class="recorte recorte--cielo" aria-hidden="true"></span>
+
+    <article class="tarjeta">
+      <span class="washi washi--izq"></span>
+      <span class="washi washi--der"></span>
+      <span class="washi washi--pie"></span>
+      <span class="doblez" aria-hidden="true"></span>
+
+      <!-- IZQUIERDA · las fotos -->
+      <div class="fotos">
+        <figure class="polaroid polaroid--grande">
+          <svg class="clip" viewBox="0 0 30 64" aria-hidden="true"><use href="#d-clip"/></svg>
+          <div class="polaroid__foto" id="foto"></div>
+        </figure>
+
+        <!-- segunda foto, decorativa -->
+        <figure class="polaroid polaroid--chica">
+          <div class="polaroid__foto" id="foto2"></div>
+        </figure>
+
+        <svg class="doodle doodle--estrella" viewBox="0 0 44 44" aria-hidden="true"><use href="#d-estrella" fill="#F7C64B"/></svg>
+      </div>
+
+      <!-- DERECHA · el mensaje -->
+      <div class="mensaje">
+        <p class="mensaje__saludo">¡Feliz cumpleaños,</p>
+        <h1 class="mensaje__nombre" aria-label="Daniel!"><span style="--i:0">D</span><span style="--i:1">a</span><span style="--i:2">n</span><span style="--i:3">i</span><span style="--i:4">e</span><span style="--i:5">l</span><span style="--i:6">!</span></h1>
+        <svg class="mensaje__trazo" viewBox="0 0 300 14" aria-hidden="true" preserveAspectRatio="none">
+          <path d="M4 9C58 3 110 12 160 6s88-1 136 3" fill="none"
+                stroke="#F3B8CE" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <p class="mensaje__nota">Espero este pequeño detalle, haga de tu día uno aún más especial ♡</p>
+
+        <!-- notitas: cambia los textos por los tuyos cuando quieras -->
+        <div class="notas">
+          <p class="nota nota--mantequilla">Ten un muy lindo día, te quiero muchísimo, muchísimo&nbsp;(≧◡≦)</p>
+          <p class="nota nota--menta">Abajo hay una pequeña sorpresita<br>(o^▽^o)</p>
+        </div>
+      </div>
+
+      <!-- sello postal -->
+      <div class="sello" aria-hidden="true">
+        <svg class="sello__papel" viewBox="0 0 100 116" preserveAspectRatio="none"><use href="#d-sello" fill="#FFFDF8"/></svg>
+        <svg class="sello__vela" viewBox="0 0 40 74"><use href="#d-vela"/></svg>
+        <span class="sello__texto">para ti</span>
+      </div>
+      <span class="matasellos" aria-hidden="true"></span>
+
+      <!-- doodles sueltos -->
+      <svg class="doodle doodle--corazon" viewBox="0 0 44 40" aria-hidden="true"><use href="#d-corazon" fill="#E2709F"/></svg>
+      <svg class="doodle doodle--chispa" viewBox="0 0 40 40" aria-hidden="true"><use href="#d-chispa" fill="#9FD3E8"/></svg>
+    </article>
+
+      <!-- DELANTE de la hoja -->
+      <span class="recorte recorte--rosa" aria-hidden="true">
+        <span class="recorte__washi"></span>
+      </span>
+      <span class="recorte recorte--crema" aria-hidden="true"></span>
+
+      <span class="etiqueta" aria-hidden="true"><span class="etiqueta__ojal"></span></span>
+
+      <svg class="pegatina pegatina--flor" viewBox="0 0 64 64" aria-hidden="true"><use href="#d-flor"/></svg>
+      <svg class="pegatina pegatina--estrella" viewBox="0 0 64 64" aria-hidden="true"><use href="#d-estrella-p"/></svg>
+      <svg class="pegatina pegatina--corazon" viewBox="0 0 64 60" aria-hidden="true"><use href="#d-corazon-p"/></svg>
+
+      <span class="washi washi--mesa-izq" aria-hidden="true"></span>
+      <span class="washi washi--mesa-der" aria-hidden="true"></span>
+    </div>
+
+    <!-- puente visual entre la hoja y el pastel -->
+    <div class="puente" aria-hidden="true">
+      <span class="papelito" style="--x:6%;  --r:-24deg; --cc:#F3B8CE"></span>
+      <span class="papelito" style="--x:21%; --y:46%; --r:38deg;  --cc:#F7C64B"></span>
+      <span class="papelito" style="--x:36%; --r:-9deg;  --cc:#A8DED2"></span>
+      <span class="papelito" style="--x:63%; --y:52%; --r:52deg;  --cc:#9FD3E8"></span>
+      <span class="papelito" style="--x:79%; --y:30%; --r:-33deg; --cc:#F3B8CE"></span>
+      <span class="papelito" style="--x:93%; --r:14deg;  --cc:#F7C64B"></span>
+      <svg class="puente__flecha" viewBox="0 0 28 44">
+        <path d="M14 3c-5 10 5 18 0 30M7 26l7 10 7-10" fill="none" stroke="currentColor"
+              stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+              stroke-dasharray="1 5"/>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       3 · EL PASTEL
+       ═══════════════════════════════════════════════════════ -->
+  <div class="montaje">
+
+    <div class="pastel">
+      <svg class="vela" viewBox="0 0 40 74" aria-hidden="true"><use href="#d-vela"/></svg>
+
+      <div class="capa capa--a" style="--c:#F7CBDA; --g:#FDEFF4"></div>
+      <div class="capa capa--b" style="--c:#E9C9A2; --g:#FFF8EE"></div>
+      <div class="capa capa--c" style="--c:#D3E7F2; --g:#EDF6FB"></div>
+      <div class="capa capa--d" style="--c:#DDB184; --g:#FFF4E6"></div>
+
+      <!-- la capa de abajo contiene el video -->
+      <div class="capa capa--base" style="--c:#C9945F; --g:#FFF8EE">
+        <div class="pantalla" id="pantalla"></div>
+      </div>
+    </div>
+
+    <div class="plato" aria-hidden="true"></div>
+  </div>
+
+  <p class="pie-pastel">Hecho por pau, con muchísimo amor.</p>
+
+  <footer class="pie">
+    <p>— Feliz cumple, mi amor, feliz cumple Daniel —</p>
+  </footer>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
