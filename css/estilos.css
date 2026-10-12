@@ -8,6 +8,7 @@
 
 /* ── 0. VARIABLES ───────────────────────────────────────── */
 :root{
+  --fondo:        #FFFDF9;   /* blanco cálido de la escena */
   --corcho:       #CDAE80;
   --corcho-claro: #DBBE92;
   --corcho-osc:   #B4946A;
@@ -59,18 +60,12 @@ body{
   line-height:1.45;        /* base: Baloo 2 por defecto se va a ~1.96 */
   color:var(--tinta);
 
-  background-color:var(--corcho);
-  background-image:
-    url("../img/grano-corcho.svg"),
-    radial-gradient(130% 70% at 50% -8%, rgba(255,246,230,.38), transparent 60%),
-    linear-gradient(176deg, var(--corcho-claro) 0%, var(--corcho) 54%, var(--corcho-osc) 100%);
-  background-size: 480px 480px, 100% 100%, 100% 100%;
-  background-repeat: repeat, no-repeat, no-repeat;
+  background-color:var(--fondo);
 }
 body::after{
   content:"";
   position:fixed; inset:0; z-index:3; pointer-events:none;
-  box-shadow: inset 0 0 180px rgba(102,76,46,.18);
+  box-shadow: inset 0 0 180px rgba(176,146,106,.06);
 }
 
 .sprite{ position:absolute; width:0; height:0; overflow:hidden }
@@ -482,7 +477,7 @@ img{ display:block; max-width:100% }
   position:relative;
   height:clamp(54px,6.6vh,82px);
   margin-top:clamp(.5rem,1.6vh,1.1rem);
-  color:#F0E0C8;
+  color:#D8C3A4;
 }
 .papelito{
   position:absolute; left:var(--x); top:var(--y,14%);
@@ -579,8 +574,8 @@ img{ display:block; max-width:100% }
 .etiqueta__ojal{
   position:absolute; left:14%; top:50%; translate:0 -50%;
   width:22%; aspect-ratio:1; border-radius:50%;
-  background:var(--corcho-claro);
-  box-shadow:inset 0 1px 2px rgba(84,56,28,.3);
+  background:var(--fondo);
+  box-shadow:inset 0 1px 2px rgba(84,56,28,.22);
 }
 
 /* pegatinas troqueladas */
@@ -741,8 +736,7 @@ img{ display:block; max-width:100% }
   font-size:clamp(1rem,2.2vw,1.18rem);
   line-height:1.35;
   letter-spacing:.01em;
-  color:#F7ECDC;
-  text-shadow:0 1px 2px rgba(84,56,28,.45);
+  color:var(--tinta-suave);
 }
 
 /* ── 7. VIDEO ───────────────────────────────────────────── */
@@ -793,8 +787,7 @@ img{ display:block; max-width:100% }
   font-size:clamp(.98rem,2.1vw,1.14rem);
   line-height:1.35;
   letter-spacing:.01em;
-  color:#F2E3CE;
-  text-shadow:0 1px 2px rgba(84,56,28,.45);
+  color:var(--tinta-suave);
 }
 
 /* ── 9. RESPONSIVE ──────────────────────────────────────── */
