@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+
+# copias de seguridad de las iteraciones de diseño
+_sin-usar/
+
+# recortes de las capturas del video: la página no los usa
+img/fotos-opcionales/
+
+# el video se carga desde YouTube, esta carpeta ya no hace falta
+video/
